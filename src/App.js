@@ -58,7 +58,7 @@ function App() {
       date: date // Задаем дату товара
     }
 
-    setGoods([...goods, newGood]); // Вносим новый товар в массив товаров
+    setGoodsByDate([...goodsByDate, newGood]); // Вносим новый товар в массив товаров
 
     // Добавляемновую категорию в Set категорий, чтобы избежать дублей
     setCategories(prevState => new Set(prevState).add(category));
@@ -88,7 +88,7 @@ function App() {
 
   // Функция удаления товара из таблицы
   const deleteGood = id => {
-    setGoods([...goods.filter(item => item.id !== id)]);
+    setGoodsByDate([...goodsByDate.filter(item => item.id !== id)]);
   }
 
   // Функция очистки таблицы
